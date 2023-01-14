@@ -1,11 +1,9 @@
-<script setup lang="ts">
-  import HelloWorld from '@/components/HelloWorld.vue';
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <header>
-    <div class="wrapper">
-      <HelloWorld />
+    <div class="container">
+      <RouterView />
     </div>
   </header>
 </template>
