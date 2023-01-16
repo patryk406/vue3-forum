@@ -34,9 +34,7 @@
           <p>{{ post.text }}</p>
         </div>
       </div>
-      <div class="post-date text-faded">
-        <p>{{ post.publishedAt }}</p>
-      </div>
+      <BaseDate class="post-date text-faded" :post-date="post.publishedAt" />
     </div>
   </div>
 </template>

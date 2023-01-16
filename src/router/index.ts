@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 import HomeView from '@/components/pages/HomeView.vue';
 
 import sourceData from '@/data.json';
+import CategoryView from '@/components/pages/CategoryView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -11,6 +12,18 @@ const router = createRouter({
       path: '/',
       name: 'HomeView',
       component: HomeView,
+    },
+    {
+      path: '/forum/:id',
+      name: 'SingleForum',
+      component: () => import('../components/pages/SingleForum.vue'),
+      props: true,
+    },
+    {
+      path: '/category/:id',
+      name: 'Category',
+      component: import('../components/pages/CategoryView.vue'),
+      props: true,
     },
     {
       path: '/thread/:id',
